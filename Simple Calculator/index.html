@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="bg-[url('images/bg-black.jpg')] bg-no-repeat bg-cover">
+    <div class="">
+      <div
+        class="container w-fit mx-auto my-24 bg-zinc-800 bg-opacity-95 dark:bg-white rounded-3xl shadow-2xl shadow-black px-1"
+      >
+        <div class="name p-4 flex justify-between">
+          <p
+            class="rounded-md p-2 font-mono text-white dark:text-black text-lg font-bold"
+          >
+            Calculator
+          </p>
+        </div>
+        <div>
+          <div
+            class="screen mx-4 my-6 text-end rounded-md bg-gray-700 border border-white shadow-inner"
+          >
+
+            <input
+              class="text-end bg-gray-700 text-white mr-2 border-none"
+              id="head"
+              type="text"
+              disabled
+            /><br />
+            <input
+              class="text-end bg-gray-700 text-white mr-2 border-none"
+              id="answer"
+              type="text"
+              value="0"
+              disabled
+            />
+          </div>
+        </div>
+
+        <div class="first_row">
+          <button class="btn" onclick="clea()">AC</button>
+          <button class="btn" onclick="deletee()">Del</button>
+          <button class="btn" onclick="display('/')">/</button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('+')"
+          >
+            +
+          </button>
+        </div>
+        <div class="second_row">
+          <button class="btn" onclick="display('7')">7</button>
+          <button class="btn" onclick="display('8')">8</button>
+          <button class="btn" onclick="display('9')">9</button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('*')"
+          >
+            *
+          </button>
+        </div>
+        <div class="third_row">
+          <button class="btn" onclick="display('4')">4</button>
+          <button class="btn" onclick="display('5')">5</button>
+          <button class="btn" onclick="display('6')">6</button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('-')"
+          >
+            -
+          </button>
+        </div>
+        <div class="row grid grid-flow-row grid-cols-4 grid-rows-2">
+          <button class="btn" onclick="display('1')">1</button>
+          <button class="btn" onclick="display('2')">2</button>
+          <button class="btn" onclick="display('3')">3</button>
+          <button
+            class="bg-black text-white dark:bg-black dark:text-white border border-white mx-2 my-3 rounded-xl row-span-2 hover:bg-white hover:text-black dark:hover:text-black  dark:border dark:border-slate-900"
+            onclick="display_result()"
+          >
+            =
+          </button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('0')"
+          >
+            0
+          </button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('.')"
+          >
+            .
+          </button>
+          <button
+            class="btn bg-white text-black dark:bg-black dark:text-white"
+            onclick="display('%')"
+          >
+            %
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
